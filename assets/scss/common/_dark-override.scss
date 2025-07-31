@@ -1,0 +1,90 @@
+// Force light mode for all color schemes
+html[data-bs-theme="dark"],
+html[data-bs-theme="auto"],
+body[data-bs-theme="dark"],
+body[data-bs-theme="auto"] {
+  // Force light backgrounds
+  --bs-body-bg: #FFFFFF !important;
+  --bs-body-color: #374151 !important;
+  --bs-bg-opacity: 1 !important;
+  
+  // Override Bootstrap dark theme colors
+  --bs-dark: #374151 !important;
+  --bs-light: #F4F6F8 !important;
+  --bs-primary: #FF0420 !important;
+  --bs-secondary: #4B5563 !important;
+  
+  // Text colors
+  --bs-text-body: #374151 !important;
+  --bs-text-muted: #6B7280 !important;
+  --bs-heading-color: #111827 !important;
+  
+  // Component colors
+  --bs-card-bg: #FFFFFF !important;
+  --bs-card-border-color: #E5E7EB !important;
+  --bs-border-color: #E5E7EB !important;
+  
+  // Link colors
+  --bs-link-color: #FF0420 !important;
+  --bs-link-hover-color: #E6001C !important;
+  
+  // Code colors
+  --bs-code-color: #374151 !important;
+  
+  background-color: #FFFFFF !important;
+  color: #374151 !important;
+}
+
+// Override dark theme specific elements
+[data-bs-theme="dark"] {
+  .navbar,
+  .navbar-dark {
+    background-color: rgba(255,255,255,0.95) !important;
+    border-color: #E5E7EB !important;
+    
+    .navbar-brand,
+    .nav-link {
+      color: #374151 !important;
+      
+      &:hover {
+        color: #FF0420 !important;
+      }
+    }
+  }
+  
+  .bg-dark {
+    background-color: #F4F6F8 !important;
+  }
+  
+  .text-light {
+    color: #374151 !important;
+  }
+  
+  .btn-dark {
+    background-color: #374151 !important;
+    border-color: #374151 !important;
+    color: #FFFFFF !important;
+  }
+  
+  .alert-primary {
+    background-color: #FFF0F1 !important;
+    border-color: #FF6B7D !important;
+    color: #E6001C !important;
+  }
+  
+  .card {
+    background-color: #FFFFFF !important;
+    border-color: #E5E7EB !important;
+    color: #374151 !important;
+  }
+  
+  .bg-light {
+    background-color: #FAFBFC !important;
+  }
+  
+  footer {
+    background-color: #FAFBFC !important;
+    border-color: #E5E7EB !important;
+    color: #6B7280 !important;
+  }
+}

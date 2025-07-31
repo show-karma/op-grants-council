@@ -1,0 +1,400 @@
+// Import Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+// Import dark mode override
+@import 'dark-override';
+
+// Global Styles - Clean and Professional
+body {
+  font-family: $font-family-sans-serif;
+  color: $body-color;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: $body-bg;
+}
+
+// Typography - Clean and Readable
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-display;
+  font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
+  color: $headings-color;
+  letter-spacing: -0.025em;
+  
+  &:not(:last-child) {
+    margin-bottom: $spacer-md;
+  }
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: $font-weight-extrabold;
+  color: $headings-color;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: $font-weight-bold;
+  color: $headings-color;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: $font-weight-semibold;
+  color: $headings-color;
+}
+
+// Lead text
+.lead {
+  font-size: $font-size-xl;
+  line-height: 1.7;
+  color: $body-color-secondary;
+  font-weight: $font-weight-normal;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+// Navigation - Clean and Professional
+.navbar {
+  background: $navbar-bg;
+  backdrop-filter: $navbar-backdrop;
+  -webkit-backdrop-filter: $navbar-backdrop;
+  border-bottom: 1px solid $navbar-border-color;
+  box-shadow: $shadow-sm;
+  padding: 1rem 0;
+  
+  .navbar-brand {
+    font-weight: $font-weight-bold;
+    font-size: $font-size-xl;
+    color: $headings-color;
+    
+    &:hover {
+      color: $primary;
+    }
+  }
+  
+  .navbar-nav {
+    .nav-link {
+      font-weight: $font-weight-medium;
+      color: $body-color;
+      padding: 0.5rem 1rem;
+      border-radius: $border-radius;
+      
+      &:hover {
+        color: $primary;
+        background: rgba($primary, 0.05);
+      }
+      
+      &.active {
+        color: $primary;
+        background: rgba($primary, 0.08);
+        font-weight: $font-weight-semibold;
+      }
+    }
+  }
+}
+
+// Hero Section - Clean and Elegant
+.hero-section {
+  background: $bg-gradient-hero;
+  padding-top: $spacer-3xl;
+  padding-bottom: $spacer-3xl;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+// Alert - Professional Styling
+.alert {
+  border: 1px solid $alert-primary-border;
+  border-radius: $border-radius-lg;
+  padding: $spacer-md $spacer-lg;
+  box-shadow: $shadow-sm;
+  
+  &.alert-primary {
+    background: $alert-primary-bg;
+    border-color: $alert-primary-border;
+    color: $alert-primary-text;
+    
+    .alert-heading {
+      color: $primary-dark;
+      font-weight: $font-weight-bold;
+      margin-bottom: $spacer-sm;
+    }
+  }
+}
+
+// Button - Professional and Clean
+.btn {
+  font-weight: $font-weight-semibold;
+  padding: 0.75rem 1.5rem;
+  border-radius: $border-radius;
+  border: none;
+  text-decoration: none;
+  display: inline-block;
+  
+  &.btn-primary {
+    background: $btn-primary-bg;
+    color: $btn-primary-color;
+    box-shadow: $btn-shadow;
+    
+    &:hover {
+      background: $btn-primary-bg-hover;
+      box-shadow: $btn-shadow-hover;
+      color: $btn-primary-color;
+    }
+  }
+  
+  &.btn-outline-primary {
+    background: transparent;
+    border: 2px solid $primary;
+    color: $primary;
+    
+    &:hover {
+      background: $primary;
+      color: white;
+    }
+  }
+  
+  &.btn-lg {
+    padding: 1rem 2rem;
+    font-size: $font-size-lg;
+    border-radius: $border-radius-lg;
+  }
+  
+  &.btn-sm {
+    padding: 0.5rem 1rem;
+    font-size: $font-size-sm;
+  }
+}
+
+// Card - Clean Professional Design
+.card {
+  border: 1px solid $card-border;
+  border-radius: $border-radius-lg;
+  background: $card-bg;
+  overflow: hidden;
+  box-shadow: $card-shadow;
+  
+  &:hover {
+    box-shadow: $card-shadow-hover;
+    border-color: rgba($primary, 0.2);
+    
+    .card-title {
+      color: $primary;
+    }
+  }
+  
+  .card-body {
+    padding: $spacer-lg;
+    
+    .card-title {
+      font-weight: $font-weight-semibold;
+      margin-bottom: $spacer-sm;
+      color: $headings-color;
+    }
+    
+    .card-text {
+      color: $body-color-secondary;
+      line-height: 1.6;
+      margin-bottom: $spacer-md;
+    }
+  }
+  
+  &.border-0 {
+    border: none;
+  }
+}
+
+// Section Spacing
+.section {
+  padding: $spacer-3xl 0;
+  
+  &.section-md {
+    padding: $spacer-2xl 0;
+  }
+  
+  &.section-lg {
+    padding: 4rem 0;
+  }
+}
+
+// Background variations
+.bg-light {
+  background: $body-bg-secondary !important;
+  border-top: 1px solid $border-color-light;
+  border-bottom: 1px solid $border-color-light;
+}
+
+// Text color utilities
+.text-muted {
+  color: $body-color-secondary !important;
+}
+
+.text-primary {
+  color: $primary !important;
+}
+
+// Icon styling
+.bg-primary {
+  background-color: $primary !important;
+  
+  &.bg-opacity-10 {
+    background-color: rgba($primary, 0.1) !important;
+  }
+}
+
+// Footer
+footer {
+  background: $footer-bg;
+  border-top: 1px solid $border-color;
+  color: $footer-color;
+  
+  .footer-content {
+    padding: $spacer-2xl 0;
+  }
+}
+
+// Dark mode override - keep it light
+@media (prefers-color-scheme: dark) {
+  body {
+    background: $body-bg !important;
+    color: $body-color !important;
+  }
+  
+  .navbar {
+    background: $navbar-bg !important;
+    border-color: $navbar-border-color !important;
+    
+    .navbar-brand,
+    .nav-link {
+      color: $body-color !important;
+    }
+  }
+  
+  .card {
+    background: $card-bg !important;
+    border-color: $card-border !important;
+    
+    .card-title {
+      color: $headings-color !important;
+    }
+    
+    .card-text {
+      color: $body-color-secondary !important;
+    }
+  }
+  
+  .bg-light {
+    background: $body-bg-secondary !important;
+    border-color: $border-color-light !important;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: $headings-color !important;
+  }
+  
+  .lead {
+    color: $body-color-secondary !important;
+  }
+  
+  .alert-primary {
+    background: $alert-primary-bg !important;
+    color: $alert-primary-text !important;
+    border-color: $alert-primary-border !important;
+  }
+  
+  footer {
+    background: $footer-bg !important;
+    color: $footer-color !important;
+  }
+  
+  code, pre {
+    background: $code-bg !important;
+    color: $code-color !important;
+  }
+  
+  .text-muted {
+    color: $body-color-secondary !important;
+  }
+}
+
+// Responsive improvements
+@media (max-width: 768px) {
+  .hero-section {
+    min-height: 60vh;
+    padding-top: $spacer-2xl;
+    padding-bottom: $spacer-2xl;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  .section {
+    padding: $spacer-2xl 0;
+  }
+}
+
+// Code blocks
+code {
+  background: $code-bg;
+  color: $code-color;
+  padding: 0.125rem 0.375rem;
+  border-radius: $border-radius-sm;
+  font-family: $font-family-monospace;
+  font-size: 0.875em;
+}
+
+pre {
+  background: $code-bg;
+  border-radius: $border-radius;
+  padding: $spacer-md;
+  overflow-x: auto;
+  
+  code {
+    background: transparent;
+    padding: 0;
+    color: inherit;
+  }
+}
+
+// Links
+a {
+  color: $link-color;
+  text-decoration: none;
+  
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: none;
+  }
+}
+
+// Badge styling
+.badge {
+  &.bg-primary {
+    background-color: $primary !important;
+  }
+}
+
+// Clean statistics display
+.fs-3 {
+  font-size: 2rem !important;
+  font-weight: $font-weight-bold;
+  color: $primary;
+}
+
+// Professional spacing
+.mb-5 {
+  margin-bottom: 3rem !important;
+}
+
+.py-5 {
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+}
