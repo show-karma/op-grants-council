@@ -13,6 +13,7 @@
     "dev": "hugo server --disableFastRender --noHTTPCache",
     "format": "prettier **/** -w -c",
     "build": "hugo --minify --gc",
+    "build:production": "hugo --minify --gc --environment production",
     "preview": "vite preview --outDir public"
   },
   "dependencies": {

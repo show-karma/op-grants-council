@@ -216,7 +216,10 @@
       "px-0",
       "px-4",
       "query-no-results",
+<<<<<<< Updated upstream
       "rounded",
+=======
+>>>>>>> Stashed changes
       "rounded-circle",
       "rounded-pill",
       "row",
@@ -277,6 +280,10 @@
       "grant-seasons",
       "growth-grants",
       "how-to-apply",
+<<<<<<< Updated upstream
+=======
+      "how-to-prepare",
+>>>>>>> Stashed changes
       "how-we-operate",
       "impact-metrics",
       "infrastructure-grants",
