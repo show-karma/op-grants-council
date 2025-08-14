@@ -1,0 +1,315 @@
+{{ if site.Params.doks.alert -}}
+  {{ partial "header/alert.html" . }}
+{{ end -}}
+
+{{ if site.Params.doks.navbarSticky -}}
+<div class="sticky-top">
+{{ end -}}
+
+{{ if site.Params.doks.headerBar -}}
+<div class="header-bar"></div>
+{{ end -}}
+
+<header class="navbar navbar-expand-lg">
+  {{ with site.Params.doks.containerBreakpoint -}}
+    <div class="container-{{ . }}">
+  {{ else -}}
+    <div class="container">
+  {{ end -}}
+
+    <!-- Site title with logo -->
+    <a class="navbar-brand me-auto me-lg-3 d-flex align-items-center" href="{{ relLangURL "" }}">
+      <span class="navbar-brand-logo me-2">O</span>
+      <span>Optimism Grants Council</span>
+    </a>
+
+    <!-- FlexSearch mobile -->
+    {{ partial "main/showFlexSearch" . }}
+    {{ $showFlexSearch := .Scratch.Get "showFlexSearch" -}}
+    {{ if $showFlexSearch -}}
+    <button type="button" id="searchToggleMobile" class="btn btn-link nav-link mx-2 d-lg-none" aria-label="Search website">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <circle cx="10" cy="10" r="7"></circle>
+        <line x1="21" y1="21" x2="15" y2="15"></line>
+      </svg>
+    </button>
+    {{ end -}}
+
+    <!-- Main navigation button -->
+    <button class="btn btn-link nav-link mx-2 order-3 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavMain" aria-controls="offcanvasNavMain" aria-label="Open main navigation menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <line x1="4" y1="8" x2="20" y2="8"></line>
+        <line x1="4" y1="16" x2="20" y2="16"></line>
+      </svg>
+    </button>
+
+    <!-- Main navigation -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavMain" aria-labelledby="offcanvasNavMainLabel">
+      {{ if site.Params.doks.headerBar -}}
+        <div class="header-bar d-lg-none"></div>
+      {{ end -}}
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavMainLabel">{{ site.Title }}</h5>
+        <button type="button" class="btn btn-link nav-link p-0 ms-auto" data-bs-dismiss="offcanvas" aria-label="Close">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-x" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M18 6l-12 12"></path>
+            <path d="M6 6l12 12"></path>
+         </svg>
+        </button>
+      </div>
+      <div class="offcanvas-body d-flex flex-column flex-lg-row justify-content-between">
+        <ul class="navbar-nav flex-grow-1">
+          {{- $current := . -}}
+          {{- $section := $current.Section -}}
+          {{ range .Site.Menus.main -}}
+            {{- $active := or ($current.IsMenuCurrent "main" .) ($current.HasMenuCurrent "main" .) -}}
+            {{- $active = or $active (eq .Name $current.Title) -}}
+            {{- $active = or $active (eq .Name ($section | humanize)) -}}
+            {{ if .HasChildren -}}
+              <!-- Desktop dropdown -->
+              <li class="nav-item dropdown d-none d-lg-block">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  {{ .Name -}}
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 9l6 6l6 -6"></path>
+                  </svg>
+                </a>
+                <ul class="dropdown-menu shadow rounded border-0">
+                  {{ range .Children -}}
+                  {{- $childActive := eq .Name $current.Title -}}
+                    <li><a class="dropdown-item{{ if $childActive }} active{{ end }}" href="{{ .URL | absURL }}"{{ if $childActive }} aria-current="true"{{ end }}{{ if hasPrefix .URL "http" }} target="_blank" rel="noopener"{{ end }}>{{ .Name }}</a></li>
+                  {{ end -}}
+                </ul>
+              </li>
+              <!-- Mobile expanded list - show only on small screens -->
+              <li class="nav-item d-block d-lg-none">
+                <div class="nav-link fw-semibold text-muted">{{ .Name }}</div>
+                <ul class="navbar-nav ms-3">
+                  {{ range .Children -}}
+                  {{- $childActive := eq .Name $current.Title -}}
+                    <li class="nav-item">
+                      <a class="nav-link{{ if $childActive }} active{{ end }}" href="{{ .URL | absURL }}"{{ if $childActive }} aria-current="true"{{ end }}{{ if hasPrefix .URL "http" }} target="_blank" rel="noopener"{{ end }}>{{ .Name }}</a>
+                    </li>
+                  {{ end -}}
+                </ul>
+              </li>
+            {{ else -}}
+              <li class="nav-item">
+                <a class="nav-link{{ if $active }} active{{ end }}" href="{{ .URL | absURL }}"{{ if $active }} aria-current="true"{{ end }}{{ if hasPrefix .URL "http" }} target="_blank" rel="noopener"{{ end }}>{{ .Name }}</a>
+              </li>
+            {{ end -}}
+          {{ end -}}
+        </ul>
+
+        <!-- FlexSearch desktop -->
+        {{ partial "main/showFlexSearch" . }}
+        {{ $showFlexSearch := .Scratch.Get "showFlexSearch" -}}
+        {{ if $showFlexSearch -}}
+        <button type="button" id="searchToggleDesktop" class="btn btn-link nav-link p-2 d-none d-lg-block" aria-label="Search website">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <circle cx="10" cy="10" r="7"></circle>
+            <line x1="21" y1="21" x2="15" y2="15"></line>
+          </svg>
+        </button>
+        {{ end -}}
+
+        <!-- Color mode toggler -->
+        {{ if and (eq site.Params.doks.colorMode "auto") site.Params.doks.colorModeToggler -}}
+        <button id="buttonColorMode" class="btn btn-link mx-auto nav-link p-0 ms-lg-2 me-lg-1" type="button" aria-label="Toggle theme">
+          <svg data-bs-theme-value="dark" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+          </svg>
+          <svg data-bs-theme-value="light" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+            <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0m-5 0h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7"></path>
+          </svg>
+        </button>
+        {{ end -}}
+
+        <!-- Social menu -->
+        {{ if .Site.Menus.social -}}
+        <ul id="socialMenu" class="nav mx-auto flex-row order-lg-4">
+          {{ range .Site.Menus.social -}}
+            <li class="nav-item">
+              <a class="nav-link social-link" href="{{ .URL | relURL }}"{{ if hasPrefix .URL "http" }} target="_blank" rel="noopener"{{ end }}>{{ .Pre | safeHTML }}<small class="ms-2 visually-hidden">{{ .Name | safeHTML }}</small></a>
+            </li>
+          {{ end -}}
+        </ul>
+        {{ end -}}
+
+        <!-- Mobile social links -->
+        <div class="d-lg-none border-top pt-3 mt-3">
+          {{ if .Site.Menus.social -}}
+          <div class="d-flex justify-content-center gap-2">
+            {{ range .Site.Menus.social -}}
+              <a class="btn btn-link" href="{{ .URL | relURL }}"{{ if hasPrefix .URL "http" }} target="_blank" rel="noopener"{{ end }}>{{ .Pre | safeHTML }}</a>
+            {{ end -}}
+          </div>
+          {{ end -}}
+        </div>
+
+        <!-- Navbar button mobile -->
+        {{ if site.Params.doks.navBarButton -}}
+          <a class="btn btn-primary rounded-pill mt-2 btn-block d-lg-none" href="{{ site.Params.doks.navBarButtonUrl | absURL }}" role="button">{{ site.Params.doks.navBarButtonText }}</a>
+        {{ end -}}
+      </div>
+    </div>
+
+    <!-- Navbar button desktop -->
+    {{ if site.Params.doks.navBarButton -}}
+      <a class="btn btn-primary rounded-pill ms-3 me-2 px-4 order-lg-3 d-none d-lg-block" href="{{ site.Params.doks.navBarButtonUrl | absURL }}" role="button">{{ site.Params.doks.navBarButtonText }}</a>
+    {{ end -}}
+
+  </div>
+</header>
+{{ if site.Params.doks.navbarSticky -}}
+</div>
+{{ end -}}
+
+<!-- Search modal -->
+{{ if site.Params.doks.flexSearch -}}
+{{ partial "header/search-modal" . }}
+{{ end -}}
+
+<style>
+.navbar-brand-logo {
+  width: 32px;
+  height: 32px;
+  background-color: #FF0420;
+  color: white;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.nav-link.fw-semibold {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+  margin-top: 0.5rem;
+}
+
+.navbar-nav .navbar-nav {
+  margin-bottom: 0.5rem;
+}
+
+.offcanvas-body .border-top {
+  border-color: var(--bs-gray-300) !important;
+}
+
+/* Ensure mobile menu items are properly styled */
+.offcanvas-body .nav-link {
+  padding: 0.5rem 1rem;
+}
+
+.offcanvas-body .navbar-nav .navbar-nav .nav-link {
+  padding-left: 2rem;
+}
+
+/* Force offcanvas to full height with white background */
+#offcanvasNavMain {
+  height: 100vh !important;
+  max-height: 100vh !important;
+  background-color: white !important;
+  width: 280px !important;
+}
+
+/* Override h-auto class specifically for our offcanvas */
+#offcanvasNavMain.h-auto {
+  height: 100vh !important;
+  max-height: 100vh !important;
+}
+
+#offcanvasNavMain.offcanvas-end.h-auto {
+  height: 100vh !important;
+  max-height: 100vh !important;
+}
+
+.offcanvas.offcanvas-end.h-auto#offcanvasNavMain {
+  height: 100vh !important;
+  max-height: 100vh !important;
+}
+
+#offcanvasNavMain .offcanvas-header {
+  background-color: white !important;
+}
+
+#offcanvasNavMain .offcanvas-body {
+  background-color: white !important;
+  overflow-y: auto !important;
+  flex: 1 1 auto !important;
+  height: calc(100vh - 56px) !important;
+}
+
+/* Ensure the offcanvas backdrop works properly */
+.offcanvas-backdrop {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+</style>
+
+<script>
+// Force offcanvas to have full height and white background
+document.addEventListener('DOMContentLoaded', function() {
+  const offcanvas = document.getElementById('offcanvasNavMain');
+  if (offcanvas) {
+    // Function to fix the offcanvas styles
+    function fixOffcanvasStyles() {
+      offcanvas.classList.remove('h-auto');
+      offcanvas.style.height = '100vh';
+      offcanvas.style.maxHeight = 'none';
+      offcanvas.style.backgroundColor = 'white';
+      
+      const header = offcanvas.querySelector('.offcanvas-header');
+      if (header) {
+        header.style.backgroundColor = 'white';
+      }
+      
+      const body = offcanvas.querySelector('.offcanvas-body');
+      if (body) {
+        body.style.backgroundColor = 'white';
+        body.style.flex = '1 1 auto';
+        body.style.overflowY = 'auto';
+      }
+    }
+    
+    // Listen for when offcanvas is about to be shown
+    offcanvas.addEventListener('show.bs.offcanvas', function() {
+      fixOffcanvasStyles();
+    });
+    
+    // Listen for when offcanvas is fully shown
+    offcanvas.addEventListener('shown.bs.offcanvas', function() {
+      fixOffcanvasStyles();
+      // Use a small delay to ensure Bootstrap has finished its animations
+      setTimeout(fixOffcanvasStyles, 10);
+    });
+    
+    // Watch for class changes using MutationObserver
+    const observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(mutation) {
+        if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+          if (offcanvas.classList.contains('show') && offcanvas.classList.contains('h-auto')) {
+            fixOffcanvasStyles();
+          }
+        }
+      });
+    });
+    
+    // Start observing the offcanvas for class changes
+    observer.observe(offcanvas, {
+      attributes: true,
+      attributeFilter: ['class']
+    });
+  }
+});
+</script>

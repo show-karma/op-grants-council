@@ -1,27 +1,74 @@
+# Grants dropdown
 [[main]]
-  name = "About"
-  url = "/about/"
+  name = "Grants"
   weight = 10
+  identifier = "grants"
 
 [[main]]
-  name = "Seasons"
-  url = "/seasons/"
+  name = "Audit Grants"
+  url = "https://atlas.optimism.io/missions/audit-grants"
+  parent = "grants"
+  weight = 1
+
+[[main]]
+  name = "Growth Grants"
+  url = "https://atlas.optimism.io/missions/growth-grants"
+  parent = "grants"
+  weight = 2
+
+[[main]]
+  name = "Retro Funding: Dev Tooling"
+  url = "https://atlas.optimism.io/missions/retro-funding-dev-tooling"
+  parent = "grants"
+  weight = 3
+
+[[main]]
+  name = "Retro Funding: Onchain Builders"
+  url = "https://atlas.optimism.io/missions/retro-funding-onchain-builders"
+  parent = "grants"
+  weight = 4
+
+[[main]]
+  name = "Foundation Missions"
+  url = "https://atlas.optimism.io/missions/foundation-missions"
+  parent = "grants"
+  weight = 5
+
+# Recipients link
+[[main]]
+  name = "Recipients"
+  url = "https://atlas.optimism.io/round/results?rounds=7,8"
   weight = 20
 
+# Governance link
 [[main]]
-  name = "Programs"
-  url = "/programs/"
+  name = "Governance"
+  url = "https://atlas.optimism.io/governance"
   weight = 30
 
+# More dropdown
 [[main]]
-  name = "Updates"
-  url = "/updates/"
+  name = "More"
   weight = 40
+  identifier = "more"
 
 [[main]]
-  name = "Resources"
-  url = "/resources/"
-  weight = 50
+  name = "Optimism"
+  url = "https://optimism.io/"
+  parent = "more"
+  weight = 1
+
+[[main]]
+  name = "Forum"
+  url = "https://gov.optimism.io/"
+  parent = "more"
+  weight = 2
+
+[[main]]
+  name = "Delegates"
+  url = "https://vote.optimism.io/delegates"
+  parent = "more"
+  weight = 3
 
 [[social]]
   name = "Twitter"
@@ -30,10 +77,16 @@
   weight = 10
 
 [[social]]
+  name = "Discord"
+  pre = '<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-discord" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M8 12a1 1 0 1 0 2 0a1 1 0 0 0 -2 0"></path><path d="M14 12a1 1 0 1 0 2 0a1 1 0 0 0 -2 0"></path><path d="M15.5 17c0 1 1.5 3 2 3c1.5 0 2.833 -1.667 3.5 -3c.667 -1.667 .5 -5.833 -1.5 -11.5c-1.457 -1.015 -3 -1.34 -4.5 -1.5l-.972 1.923a11.913 11.913 0 0 0 -4.053 0l-.975 -1.923c-1.5 .16 -3.043 .485 -4.5 1.5c-2 5.667 -2.167 9.833 -1.5 11.5c.667 1.333 2 3 3.5 3c.5 0 2 -2 2 -3"></path><path d="M7 16.5c3.5 1 6.5 1 10 0"></path></svg>'
+  url = "https://discord.com/invite/optimism"
+  weight = 20
+
+[[social]]
   name = "GitHub"
   pre = '<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path></svg>'
   url = "https://github.com/ethereum-optimism"
-  weight = 20
+  weight = 30
 
 [[footer]]
   name = "Privacy Policy"
