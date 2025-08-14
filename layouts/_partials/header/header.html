@@ -23,6 +23,15 @@
       <span>Optimism Grants Council</span>
     </a>
 
+    <!-- Main navigation button -->
+    <button class="btn btn-link nav-link mx-2 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavMain" aria-controls="offcanvasNavMain" aria-label="Open main navigation menu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <line x1="4" y1="8" x2="20" y2="8"></line>
+        <line x1="4" y1="16" x2="20" y2="16"></line>
+      </svg>
+    </button>
+
     <!-- FlexSearch mobile -->
     {{ partial "main/showFlexSearch" . }}
     {{ $showFlexSearch := .Scratch.Get "showFlexSearch" -}}
@@ -35,15 +44,6 @@
       </svg>
     </button>
     {{ end -}}
-
-    <!-- Main navigation button -->
-    <button class="btn btn-link nav-link mx-2 order-3 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavMain" aria-controls="offcanvasNavMain" aria-label="Open main navigation menu">
-      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-        <line x1="4" y1="8" x2="20" y2="8"></line>
-        <line x1="4" y1="16" x2="20" y2="16"></line>
-      </svg>
-    </button>
 
     <!-- Main navigation -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavMain" aria-labelledby="offcanvasNavMainLabel">
@@ -216,39 +216,70 @@
   padding-left: 2rem;
 }
 
-/* Force offcanvas to full height with white background */
-#offcanvasNavMain {
-  height: 100vh !important;
-  max-height: 100vh !important;
-  background-color: white !important;
-  width: 280px !important;
+/* Mobile-only styles using media query */
+@media (max-width: 991.98px) {
+  /* Force offcanvas to full height on mobile only */
+  #offcanvasNavMain {
+    height: 100vh !important;
+    height: 100dvh !important; /* Use dynamic viewport height for mobile browsers */
+    max-height: none !important;
+    background-color: white !important;
+    width: 280px !important;
+    position: fixed !important;
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+  }
+
+  /* Override any h-auto class on mobile */
+  #offcanvasNavMain.h-auto,
+  #offcanvasNavMain.offcanvas-end.h-auto,
+  .offcanvas.offcanvas-end.h-auto#offcanvasNavMain {
+    height: 100vh !important;
+    height: 100dvh !important;
+    max-height: none !important;
+  }
+
+  #offcanvasNavMain .offcanvas-header {
+    background-color: white !important;
+    border-bottom: 1px solid var(--bs-gray-200);
+  }
+
+  #offcanvasNavMain .offcanvas-body {
+    background-color: white !important;
+    overflow-y: auto !important;
+    flex: 1 1 auto !important;
+    height: auto !important;
+    max-height: calc(100vh - 70px) !important;
+    max-height: calc(100dvh - 70px) !important;
+  }
+
+  /* Ensure the offcanvas is flush with screen edge */
+  .offcanvas-end {
+    right: 0 !important;
+  }
+
+  /* Fix button positioning on mobile */
+  .navbar .order-3 {
+    order: 2 !important;
+  }
+  
+  #searchToggleMobile {
+    order: 3 !important;
+  }
 }
 
-/* Override h-auto class specifically for our offcanvas */
-#offcanvasNavMain.h-auto {
-  height: 100vh !important;
-  max-height: 100vh !important;
-}
-
-#offcanvasNavMain.offcanvas-end.h-auto {
-  height: 100vh !important;
-  max-height: 100vh !important;
-}
-
-.offcanvas.offcanvas-end.h-auto#offcanvasNavMain {
-  height: 100vh !important;
-  max-height: 100vh !important;
-}
-
-#offcanvasNavMain .offcanvas-header {
-  background-color: white !important;
-}
-
-#offcanvasNavMain .offcanvas-body {
-  background-color: white !important;
-  overflow-y: auto !important;
-  flex: 1 1 auto !important;
-  height: calc(100vh - 56px) !important;
+/* Desktop styles - ensure normal height */
+@media (min-width: 992px) {
+  #offcanvasNavMain {
+    height: auto !important;
+    max-height: none !important;
+  }
+  
+  #offcanvasNavMain .offcanvas-body {
+    height: auto !important;
+    max-height: none !important;
+  }
 }
 
 /* Ensure the offcanvas backdrop works properly */
