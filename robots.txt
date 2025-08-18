@@ -1,3 +1,3 @@
 User-agent: *
 Disallow: /admin/
-Sitemap: https://show-karma.github.io/sitemap.xml
+Sitemap: https://www.opgrants.io/sitemap.xml
