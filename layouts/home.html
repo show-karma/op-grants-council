@@ -6,7 +6,7 @@
         <h1 class="mb-4">{{ .Title }}</h1>
         <p class="lead mb-5">{{ .Params.lead | safeHTML }}</p>
       </div>
-      <div class="col-lg-10 col-xl-8 text-center">
+      <div class="col-lg-10 col-xl-10 text-center">
         <div class="alert alert-primary mb-5" role="alert">
           <div class="d-flex align-items-center justify-content-center">
             <div class="flex-shrink-0">
@@ -19,13 +19,14 @@
             </div>
             <div class="flex-grow-1 text-start">
               <h4 class="alert-heading mb-1">Season 8 Opens August 20th!</h4>
-              <p class="mb-0">The Optimism Grants Council is preparing for Season 8. Applications will open on <strong>August 20th, 2025</strong>.</p>
+              <p class="mb-0">The Optimism Grants is preparing for Season 8. Applications will open on <strong>August 20th, 2025</strong>.</p>
             </div>
           </div>
         </div>
         <div class="text-center">
-          <a class="btn btn-primary btn-lg me-3 mb-3" href="{{ "programs/" | relURL }}" role="button">View Grant Programs</a>
-          <a class="btn btn-outline-primary btn-lg mb-3" href="{{ "about/mission/" | relURL }}" role="button">Learn More</a>
+          <a class="btn btn-primary btn-lg me-3 mb-3" href="{{ "programs/" | relURL }}" role="button">Apply for Growth Grant</a>
+          <a class="btn btn-primary btn-lg me-3 mb-3" href="{{ "programs/" | relURL }}" role="button">Apply for Audit Grant</a>
+          <a class="btn btn-outline-primary btn-lg mb-3" href="{{ "seasons/current/season-8" | relURL }}" role="button">Learn More</a>
         </div>
       </div>
     </div>
@@ -42,8 +43,8 @@
         <p class="lead">We support projects that build innovative applications, enhance developer tooling, create educational content, drive adoption, and contribute to public goods on Optimism.</p>
       </div>
     </div>
-    <div class="row g-4">
-      <div class="col-lg-3 col-md-6">
+    <div class="row justify-content-center g-4">
+      <!-- <div class="col-lg-3 col-md-6">
         <div class="card h-100 border-0 shadow-sm">
           <div class="card-body text-center p-4">
             <div class="mb-3">
@@ -60,7 +61,7 @@
             <a href="{{ "programs/" | relURL }}" class="btn btn-outline-primary btn-sm rounded-pill">Learn More</a>
           </div>
         </div>
-      </div>
+      </div> -->
       <div class="col-lg-3 col-md-6">
         <div class="card h-100 border-0 shadow-sm">
           <div class="card-body text-center p-4">
@@ -74,7 +75,7 @@
             </div>
             <h3 class="h5 card-title">Current Season</h3>
             <p class="card-text">Learn about Season 8 timeline, priorities, and application process.</p>
-            <a href="{{ "seasons/current/" | relURL }}" class="btn btn-outline-primary btn-sm rounded-pill">View Details</a>
+            <a href="{{ "seasons/current/season-8" | relURL }}" class="btn btn-outline-primary btn-sm rounded-pill">View Details</a>
           </div>
         </div>
       </div>
@@ -117,10 +118,10 @@
 
 <section class="section section-lg">
   <div class="container">
-    <div class="row align-items-center">
+    <div class="row align-items-center  justify-content-center">
       <div class="col-lg-6 mb-5 mb-lg-0">
         <h2 class="mb-4">Building the Future of Optimism</h2>
-        <p class="lead mb-4">The Optimism Grants Council is committed to fostering innovation and growth in the Optimism ecosystem. We provide strategic funding to projects that align with our vision of a scalable, sustainable, and inclusive blockchain future.</p>
+        <p class="lead mb-4">The Optimism Grants is committed to fostering innovation and growth in the Optimism ecosystem. We provide strategic funding to projects that align with our vision of a scalable, sustainable, and inclusive blockchain future.</p>
         <div class="row g-4">
           <div class="col-sm-6">
             <div class="d-flex align-items-start">
@@ -151,7 +152,7 @@
           <div class="card border-0 shadow-lg">
             <div class="card-body p-5">
               <h3 class="h4 mb-3">Ready to Apply?</h3>
-              <p class="mb-4">Join hundreds of builders who have received funding from the Optimism Grants Council. Our streamlined application process and dedicated support team are here to help you succeed.</p>
+              <p class="mb-4">Join hundreds of builders who have received funding from the Optimism Grants. Our streamlined application process and dedicated support team are here to help you succeed.</p>
               <a href="{{ "about/operations/" | relURL }}" class="btn btn-primary">Learn How We Operate</a>
             </div>
           </div>

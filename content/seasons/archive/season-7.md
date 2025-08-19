@@ -10,7 +10,7 @@ images: []
 
 ## Season 7: Retrospective
 
-Season 7 of the Optimism Grants Council has concluded. Submissions closed on July 15th, 2024.
+Season 7 of the Optimism Grants has concluded. Submissions closed on July 15th, 2024.
 
 ### Season 7 Highlights
 

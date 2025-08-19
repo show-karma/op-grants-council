@@ -1,6 +1,6 @@
----
+<!-- ---
 title: "How We Operate"
-description: "Learn how the Optimism Grants Council operates"
+description: "Learn how the Optimism Grants operates"
 lead: "Transparent and community-driven grant allocation"
 date: 2024-01-31T08:47:36+00:00
 lastmod: 2024-01-31T08:47:36+00:00
@@ -11,7 +11,7 @@ weight: 200
 
 ## How We Operate
 
-The Optimism Grants Council operates through a structured process designed to ensure fair, transparent, and impactful grant allocation.
+The Optimism Grants operates through a structured process designed to ensure fair, transparent, and impactful grant allocation.
 
 ### Grant Seasons
 
@@ -53,4 +53,4 @@ We evaluate proposals based on:
 - Regular council meeting summaries
 - Open office hours for applicants
 - Published evaluation rubrics
-- Season retrospectives and learnings
+- Season retrospectives and learnings -->

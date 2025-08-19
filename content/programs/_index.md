@@ -1,6 +1,6 @@
 ---
 title: "Grant Programs"
-description: "Explore Optimism Grants Council programs"
+description: "Explore Optimism Grants programs"
 lead: "Different grant programs for different needs"
 date: 2024-01-31T08:47:36+00:00
 lastmod: 2024-01-31T08:47:36+00:00
@@ -10,7 +10,7 @@ images: []
 
 ## Grant Programs
 
-The Optimism Grants Council offers various grant programs designed to support different types of projects and teams. Each program has specific requirements and focus areas.
+The Optimism Grants offers various grant programs designed to support different types of projects and teams. Each program has specific requirements and focus areas.
 
 ### Available Programs
 

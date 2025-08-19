@@ -10,7 +10,7 @@
 <div class="header-bar"></div>
 {{ end -}}
 
-<header class="navbar navbar-expand-lg">
+<header class="navbar navbar-expand-xl">
   {{ with site.Params.doks.containerBreakpoint -}}
     <div class="container-{{ . }}">
   {{ else -}}
@@ -18,13 +18,15 @@
   {{ end -}}
 
     <!-- Site title with logo -->
-    <a class="navbar-brand me-auto me-lg-3 d-flex align-items-center" href="{{ relLangURL "" }}">
+    <a class="navbar-brand me-auto me-xl-3 d-flex align-items-center" href="{{ relLangURL "" }}">
       <span class="navbar-brand-logo me-2">O</span>
-      <span>Optimism Grants Council</span>
+      <span>Optimism Grants</span>
     </a>
 
+    <!-- Mobile button group -->
+    <div class="d-flex d-xl-none align-items-center">
     <!-- Main navigation button -->
-    <button class="btn btn-link nav-link mx-2 d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavMain" aria-controls="offcanvasNavMain" aria-label="Open main navigation menu">
+    <button class="btn btn-link nav-link mx-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavMain" aria-controls="offcanvasNavMain" aria-label="Open main navigation menu">
       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
         <line x1="4" y1="8" x2="20" y2="8"></line>
@@ -36,7 +38,7 @@
     {{ partial "main/showFlexSearch" . }}
     {{ $showFlexSearch := .Scratch.Get "showFlexSearch" -}}
     {{ if $showFlexSearch -}}
-    <button type="button" id="searchToggleMobile" class="btn btn-link nav-link mx-2 d-lg-none" aria-label="Search website">
+    <button type="button" id="searchToggleMobile" class="btn btn-link nav-link mx-2" aria-label="Search website">
       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
         <circle cx="10" cy="10" r="7"></circle>
@@ -44,11 +46,12 @@
       </svg>
     </button>
     {{ end -}}
+    </div>
 
     <!-- Main navigation -->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavMain" aria-labelledby="offcanvasNavMainLabel">
       {{ if site.Params.doks.headerBar -}}
-        <div class="header-bar d-lg-none"></div>
+        <div class="header-bar d-xl-none"></div>
       {{ end -}}
       <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasNavMainLabel">{{ site.Title }}</h5>
@@ -60,7 +63,7 @@
          </svg>
         </button>
       </div>
-      <div class="offcanvas-body d-flex flex-column flex-lg-row justify-content-between">
+      <div class="offcanvas-body d-flex flex-column flex-xl-row justify-content-between">
         <ul class="navbar-nav flex-grow-1">
           {{- $current := . -}}
           {{- $section := $current.Section -}}
@@ -70,7 +73,7 @@
             {{- $active = or $active (eq .Name ($section | humanize)) -}}
             {{ if .HasChildren -}}
               <!-- Desktop dropdown -->
-              <li class="nav-item dropdown d-none d-lg-block">
+              <li class="nav-item dropdown d-none d-xl-block">
                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   {{ .Name -}}
                   <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -86,7 +89,7 @@
                 </ul>
               </li>
               <!-- Mobile expanded list - show only on small screens -->
-              <li class="nav-item d-block d-lg-none">
+              <li class="nav-item d-block d-xl-none">
                 <div class="nav-link fw-semibold text-muted">{{ .Name }}</div>
                 <ul class="navbar-nav ms-3">
                   {{ range .Children -}}
@@ -109,7 +112,7 @@
         {{ partial "main/showFlexSearch" . }}
         {{ $showFlexSearch := .Scratch.Get "showFlexSearch" -}}
         {{ if $showFlexSearch -}}
-        <button type="button" id="searchToggleDesktop" class="btn btn-link nav-link p-2 d-none d-lg-block" aria-label="Search website">
+        <button type="button" id="searchToggleDesktop" class="btn btn-link nav-link p-2 d-none d-xl-block" aria-label="Search website">
           <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
             <circle cx="10" cy="10" r="7"></circle>
@@ -120,7 +123,7 @@
 
         <!-- Color mode toggler -->
         {{ if and (eq site.Params.doks.colorMode "auto") site.Params.doks.colorModeToggler -}}
-        <button id="buttonColorMode" class="btn btn-link mx-auto nav-link p-0 ms-lg-2 me-lg-1" type="button" aria-label="Toggle theme">
+        <button id="buttonColorMode" class="btn btn-link mx-auto nav-link p-0 ms-xl-2 me-xl-1" type="button" aria-label="Toggle theme">
           <svg data-bs-theme-value="dark" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
             <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
@@ -134,7 +137,7 @@
 
         <!-- Social menu -->
         {{ if .Site.Menus.social -}}
-        <ul id="socialMenu" class="nav mx-auto flex-row order-lg-4">
+        <ul id="socialMenu" class="nav mx-auto flex-row order-xl-4">
           {{ range .Site.Menus.social -}}
             <li class="nav-item">
               <a class="nav-link social-link" href="{{ .URL | relURL }}"{{ if hasPrefix .URL "http" }} target="_blank" rel="noopener"{{ end }}>{{ .Pre | safeHTML }}<small class="ms-2 visually-hidden">{{ .Name | safeHTML }}</small></a>
@@ -144,7 +147,7 @@
         {{ end -}}
 
         <!-- Mobile social links -->
-        <div class="d-lg-none border-top pt-3 mt-3">
+        <div class="d-xl-none border-top pt-3 mt-3">
           {{ if .Site.Menus.social -}}
           <div class="d-flex justify-content-center gap-2">
             {{ range .Site.Menus.social -}}
@@ -156,14 +159,14 @@
 
         <!-- Navbar button mobile -->
         {{ if site.Params.doks.navBarButton -}}
-          <a class="btn btn-primary rounded-pill mt-2 btn-block d-lg-none" href="{{ site.Params.doks.navBarButtonUrl | relURL }}" role="button">{{ site.Params.doks.navBarButtonText }}</a>
+          <a class="btn btn-primary rounded-pill mt-2 btn-block d-xl-none" href="{{ site.Params.doks.navBarButtonUrl | relURL }}" role="button">{{ site.Params.doks.navBarButtonText }}</a>
         {{ end -}}
       </div>
     </div>
 
     <!-- Navbar button desktop -->
     {{ if site.Params.doks.navBarButton -}}
-      <a class="btn btn-primary rounded-pill ms-3 me-2 px-4 order-lg-3 d-none d-lg-block" href="{{ site.Params.doks.navBarButtonUrl | relURL }}" role="button">{{ site.Params.doks.navBarButtonText }}</a>
+      <a class="btn btn-primary rounded-pill ms-3 me-2 px-4 order-xl-3 d-none d-xl-block" href="{{ site.Params.doks.navBarButtonUrl | relURL }}" role="button">{{ site.Params.doks.navBarButtonText }}</a>
     {{ end -}}
 
   </div>
@@ -217,7 +220,7 @@
 }
 
 /* Mobile-only styles using media query */
-@media (max-width: 991.98px) {
+@media (max-width: 1199.98px) {
   /* Force offcanvas to full height on mobile only */
   #offcanvasNavMain {
     height: 100vh !important;
@@ -270,7 +273,7 @@
 }
 
 /* Desktop styles - ensure normal height */
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   #offcanvasNavMain {
     height: auto !important;
     max-height: none !important;

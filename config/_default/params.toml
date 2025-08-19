@@ -1,5 +1,5 @@
 # Hugo
-title = "Optimism Grants Council"
+title = "Optimism Grants"
 description = "Supporting builders and projects on Optimism through strategic grant allocation"
 images = ["cover.png"]
 
@@ -131,7 +131,7 @@ mainSections = ["docs"]
   [seo.schemas]
     type = "Organization" # Organization (default) or Person
     logo = "favicon-512x512.png" # Logo of Organization — favicon-512x512.png (default)
-    name = "Optimism Grants Council" # Name of Organization or Person
+    name = "Optimism Grants" # Name of Organization or Person
     sameAs = [] # E.g. ["https://github.com/thuliteio/thulite", "https://fosstodon.org/@thulite"]
     images = ["cover.png"] # ["cover.png"] (default)
     article = [] # Article sections

@@ -1,4 +1,4 @@
-title = "Optimism Grants Council"
+title = "Optimism Grants"
 baseurl = "http://localhost:1313/"
 disableAliases = true
 disableHugoGeneratorInject = true
@@ -15,7 +15,7 @@ defaultContentLanguage = "en"
 disableLanguages = ["de", "nl"]
 defaultContentLanguageInSubdir = false
 
-copyRight = "Copyright (c) 2024 Optimism Grants Council"
+copyRight = "Copyright (c) 2024 Optimism Grants"
 
 [build.buildStats]
   enable = true

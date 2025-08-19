@@ -1,6 +1,6 @@
----
+<!-- ---
 title: "Grant Updates"
-description: "Latest news and updates from the Optimism Grants Council"
+description: "Latest news and updates from the Optimism Grants"
 lead: "Stay informed about grants, milestones, and announcements"
 date: 2024-01-31T08:47:36+00:00
 lastmod: 2024-01-31T08:47:36+00:00
@@ -45,4 +45,4 @@ We're pleased to welcome Sarah Chen to the Grants Council. Sarah brings extensiv
 
 - Follow [@optimismFND](https://twitter.com/optimismFND) for real-time updates
 - Join our [Discord](#) for community discussions
-- Subscribe to our [newsletter](#) for monthly summaries
+- Subscribe to our [newsletter](#) for monthly summaries -->

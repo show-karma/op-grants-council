@@ -1,6 +1,6 @@
----
+<!-- ---
 title: "Our Mission"
-description: "The mission of the Optimism Grants Council"
+description: "The mission of the Optimism Grants"
 lead: "Building a thriving ecosystem on Optimism"
 date: 2024-01-31T08:47:36+00:00
 lastmod: 2024-01-31T08:47:36+00:00
@@ -11,7 +11,7 @@ weight: 100
 
 ## Our Mission
 
-The Optimism Grants Council exists to accelerate the growth and adoption of the Optimism ecosystem by strategically allocating grants to high-impact projects and initiatives.
+The Optimism Grants exists to accelerate the growth and adoption of the Optimism ecosystem by strategically allocating grants to high-impact projects and initiatives.
 
 ### Core Objectives
 
@@ -34,4 +34,4 @@ The Optimism Grants Council exists to accelerate the growth and adoption of the 
 - Educational content and resources
 - Security and auditing services
 - Cross-chain interoperability
-- Public goods and community initiatives
+- Public goods and community initiatives -->
