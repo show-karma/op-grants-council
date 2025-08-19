@@ -21,7 +21,7 @@ mainSections = ["docs"]
 
   ## Button
   navBarButton = true # false (default) or true
-  navBarButtonUrl = "programs/"
+  navBarButtonUrl = "/seasons/current/season-8/"
   navBarButtonText = "Apply for Grants"
 
   # FlexSearch

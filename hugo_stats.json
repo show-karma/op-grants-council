@@ -218,6 +218,7 @@
       "px-4",
       "py-2",
       "query-no-results",
+      "resources",
       "rounded",
       "rounded-circle",
       "rounded-pill",
@@ -266,12 +267,18 @@
     ],
     "ids": [
       "TableOfContents",
+      "application-resources",
       "available-programs",
       "builder-grants",
+      "cant-make-office-hours",
+      "community",
+      "current-status",
       "ecosystem-grants",
+      "for-grant-recipients",
       "grant-programs",
       "growth-grants",
       "how-to-apply",
+      "how-to-participate",
       "impact-metrics",
       "infrastructure-grants",
       "key-focus-areas",
@@ -280,9 +287,11 @@
       "notable-projects-funded",
       "offcanvasNavMain",
       "offcanvasNavMainLabel",
+      "office-hours",
       "our-objective",
       "query",
       "resources",
+      "resources-for-applicants",
       "search-form",
       "searchModal",
       "searchModalLabel",
@@ -293,7 +302,11 @@
       "season-7-retrospective",
       "season-8--grants-council",
       "socialMenu",
-      "toc"
+      "support--guidance",
+      "tips-for-success",
+      "toc",
+      "upcoming-schedule",
+      "what-to-expect"
     ]
   }
 }
