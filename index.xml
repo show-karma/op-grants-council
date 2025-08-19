@@ -1,7 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Optimism Grants Council</title><link>https://www.opgrants.io/</link><description>Recent content on Optimism Grants Council</description><generator>Hugo</generator><language>en</language><copyright>Copyright (c) 2024 Optimism Grants Council</copyright><lastBuildDate>Wed, 31 Jan 2024 08:47:36 +0000</lastBuildDate><atom:link href="https://www.opgrants.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Our Mission</title><link>https://www.opgrants.io/about/mission/</link><pubDate>Wed, 31 Jan 2024 08:47:36 +0000</pubDate><guid>https://www.opgrants.io/about/mission/</guid><description>&lt;h2 id="our-mission">Our Mission&lt;/h2>
-&lt;p>The Optimism Grants Council exists to accelerate the growth and adoption of the Optimism ecosystem by strategically allocating grants to high-impact projects and initiatives.&lt;/p></description></item><item><title>How We Operate</title><link>https://www.opgrants.io/about/operations/</link><pubDate>Wed, 31 Jan 2024 08:47:36 +0000</pubDate><guid>https://www.opgrants.io/about/operations/</guid><description>&lt;h2 id="how-we-operate">How We Operate&lt;/h2>
-&lt;p>The Optimism Grants Council operates through a structured process designed to ensure fair, transparent, and impactful grant allocation.&lt;/p></description></item><item><title>Season 7</title><link>https://www.opgrants.io/seasons/archive/season-7/</link><pubDate>Wed, 31 Jan 2024 08:47:36 +0000</pubDate><guid>https://www.opgrants.io/seasons/archive/season-7/</guid><description>&lt;h2 id="season-7-retrospective">Season 7: Retrospective&lt;/h2>
-&lt;p>Season 7 of the Optimism Grants Council has concluded. Submissions closed on July 15th, 2024.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Optimism Grants</title><link>https://www.opgrants.io/</link><description>Recent content on Optimism Grants</description><generator>Hugo</generator><language>en</language><copyright>Copyright (c) 2024 Optimism Grants</copyright><lastBuildDate>Wed, 31 Jan 2024 08:47:36 +0000</lastBuildDate><atom:link href="https://www.opgrants.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Season 7</title><link>https://www.opgrants.io/seasons/archive/season-7/</link><pubDate>Wed, 31 Jan 2024 08:47:36 +0000</pubDate><guid>https://www.opgrants.io/seasons/archive/season-7/</guid><description>&lt;h2 id="season-7-retrospective">Season 7: Retrospective&lt;/h2>
+&lt;p>Season 7 of the Optimism Grants has concluded. Submissions closed on July 15th, 2024.&lt;/p>
 &lt;h3 id="season-7-highlights">Season 7 Highlights&lt;/h3>
 &lt;ul>
 &lt;li>&lt;strong>Total Grants Awarded&lt;/strong>: 47&lt;/li>
@@ -10,5 +8,96 @@
 &lt;li>&lt;strong>Success Rate&lt;/strong>: 15%&lt;/li>
 &lt;/ul>
 &lt;h3 id="key-focus-areas">Key Focus Areas&lt;/h3>
-&lt;p>Season 7 prioritized:&lt;/p></description></item><item><title>Privacy Policy</title><link>https://www.opgrants.io/privacy/</link><pubDate>Thu, 07 Sep 2023 17:19:07 +0200</pubDate><guid>https://www.opgrants.io/privacy/</guid><description/></item><item><title/><link>https://www.opgrants.io/seasons/current/season-8/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.opgrants.io/seasons/current/season-8/</guid><description>&lt;h2 id="season-8--grants-council">Season 8 – Grants Council&lt;/h2>
+&lt;p>Season 7 prioritized:&lt;/p></description></item><item><title>Privacy Policy</title><link>https://www.opgrants.io/privacy/</link><pubDate>Thu, 07 Sep 2023 17:19:07 +0200</pubDate><guid>https://www.opgrants.io/privacy/</guid><description/></item><item><title/><link>https://www.opgrants.io/about/mission/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.opgrants.io/about/mission/</guid><description>&lt;!-- ---
+title: "Our Mission"
+description: "The mission of the Optimism Grants"
+lead: "Building a thriving ecosystem on Optimism"
+date: 2024-01-31T08:47:36+00:00
+lastmod: 2024-01-31T08:47:36+00:00
+draft: false
+images: []
+weight: 100
+---
+
+## Our Mission
+
+The Optimism Grants exists to accelerate the growth and adoption of the Optimism ecosystem by strategically allocating grants to high-impact projects and initiatives.
+
+### Core Objectives
+
+1. **Foster Innovation**: Support groundbreaking projects that push the boundaries of what's possible on Optimism
+2. **Drive Adoption**: Fund initiatives that bring new users and developers to the ecosystem
+3. **Build Infrastructure**: Invest in tools, libraries, and services that benefit the entire community
+4. **Support Public Goods**: Champion projects that create value for everyone in the ecosystem
+
+### Our Values
+
+- **Transparency**: All grant decisions and allocations are made public
+- **Community-First**: We prioritize projects that benefit the broader Optimism community
+- **Impact-Driven**: We measure success by the positive impact on the ecosystem
+- **Innovation**: We support bold ideas and experimental approaches
+
+### Strategic Focus Areas
+
+- Developer tooling and infrastructure
+- Consumer applications that drive adoption
+- Educational content and resources
+- Security and auditing services
+- Cross-chain interoperability
+- Public goods and community initiatives --></description></item><item><title/><link>https://www.opgrants.io/about/operations/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.opgrants.io/about/operations/</guid><description>&lt;!-- ---
+title: "How We Operate"
+description: "Learn how the Optimism Grants operates"
+lead: "Transparent and community-driven grant allocation"
+date: 2024-01-31T08:47:36+00:00
+lastmod: 2024-01-31T08:47:36+00:00
+draft: false
+images: []
+weight: 200
+---
+
+## How We Operate
+
+The Optimism Grants operates through a structured process designed to ensure fair, transparent, and impactful grant allocation.
+
+### Grant Seasons
+
+We operate in seasons, typically lasting 3-4 months each. Each season has:
+- Defined budget allocation
+- Specific focus areas and priorities
+- Clear application and review timelines
+- Published results and impact reports
+
+### Application Process
+
+1. **Application Submission**: Projects submit detailed proposals during the open application period
+2. **Initial Review**: Council members perform initial screening for eligibility and completeness
+3. **Deep Dive Analysis**: Promising proposals receive thorough evaluation
+4. **Community Input**: Select proposals are shared for community feedback
+5. **Final Decision**: Council votes on grant allocations
+6. **Public Announcement**: All decisions are published transparently
+
+### Evaluation Criteria
+
+We evaluate proposals based on:
+- **Impact Potential**: How significantly will this benefit the Optimism ecosystem?
+- **Team Capability**: Does the team have the skills and experience to deliver?
+- **Technical Merit**: Is the approach sound and innovative?
+- **Budget Efficiency**: Is the requested amount reasonable for the proposed outcomes?
+- **Alignment**: Does it align with current season priorities?
+
+### Post-Grant Support
+
+- Regular milestone check-ins
+- Technical and strategic guidance
+- Connection to relevant resources and partners
+- Public progress updates
+- Impact measurement and reporting
+
+### Transparency Commitments
+
+- All grant decisions published publicly
+- Regular council meeting summaries
+- Open office hours for applicants
+- Published evaluation rubrics
+- Season retrospectives and learnings --></description></item><item><title/><link>https://www.opgrants.io/seasons/current/season-8/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://www.opgrants.io/seasons/current/season-8/</guid><description>&lt;h2 id="season-8--grants-council">Season 8 – Grants Council&lt;/h2>
 &lt;p>The Grants Council is granting to projects that &lt;strong>increase interop adoption&lt;/strong> in the Optimism ecosystem.&lt;/p></description></item></channel></rss>
