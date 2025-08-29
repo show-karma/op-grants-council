@@ -124,7 +124,7 @@ mainSections = ["docs"]
     suffix = ""
   [seo.favicons]
     sizes = []
-    icon = "favicon.ico" # favicon.png (default)
+    icon = "favicon.png" # favicon.png (default)
     svgIcon = "icon.svg" # favicon.svg (default)
     maskIcon = "icon.svg" # mask-icon.svg (default)
     maskIconColor = "white" # white (default)
