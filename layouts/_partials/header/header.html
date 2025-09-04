@@ -18,10 +18,17 @@
   {{ end -}}
 
     <!-- Site title with logo -->
-    <a class="navbar-brand me-auto me-xl-3 d-flex align-items-center" href="{{ relLangURL "" }}">
-      <span class="navbar-brand-logo me-2">O</span>
-      <span>Optimism Grants</span>
-    </a>
+    <div class="navbar-brand align-items-center me-auto me-xl-3">
+      <a class="d-flex align-items-center text-decoration-none" href="{{ relLangURL "" }}">
+        <img src="/op-logo.png" alt="Optimism" class="navbar-brand-logo me-2">
+        <span class="text-dark">Optimism Grants</span>
+      </a>
+      <!-- Powered by Karma -->
+      <div class="d-flex align-items-center" style="justify-content: flex-end;">
+        <span class="text-muted" style="font-size: 0.7rem;">Powered by</span>
+        <img src="/karma-logo.svg" alt="Karma" style="height: 14px; width: 42px; object-fit: contain; margin-left: 0.25rem;">
+      </div>
+    </div>
 
     <!-- Mobile button group -->
     <div class="d-flex d-xl-none align-items-center">
@@ -184,14 +191,7 @@
 .navbar-brand-logo {
   width: 32px;
   height: 32px;
-  background-color: #FF0420;
-  color: white;
-  border-radius: 8px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  font-size: 14px;
+  object-fit: contain;
 }
 
 .nav-link.fw-semibold {
