@@ -34,17 +34,11 @@
   parent = "grants"
   weight = 5
 
-# Recipients link
+# Applications link
 [[main]]
-  name = "Recipients"
-  url = "https://atlas.optimism.io/round/results?rounds=7,8"
+  name = "Applications"
+  url = "https://app.opgrants.io/browse-applications"
   weight = 20
-
-# Governance link
-[[main]]
-  name = "Governance"
-  url = "https://atlas.optimism.io/governance"
-  weight = 30
 
 # More dropdown
 [[main]]
