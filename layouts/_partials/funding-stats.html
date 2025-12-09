@@ -1,0 +1,31 @@
+{{- $apiBaseUrl := site.Params.fundingStats.apiBaseUrl | default "https://gap-indexer-feat-program-currenc-pr730.up.railway.app" -}}
+{{- $programId := site.Params.fundingStats.programId | default "779" -}}
+{{- $chainId := site.Params.fundingStats.chainId | default "11155111" -}}
+
+<div
+  id="funding-stats-{{ $programId }}"
+  class="funding-stats-container text-center"
+  data-api-base-url="{{ $apiBaseUrl }}"
+  data-program-id="{{ $programId }}"
+  data-chain-id="{{ $chainId }}"
+>
+  <div class="row g-4 justify-content-center">
+    <div class="col-sm-6 col-lg-5">
+      <div class="d-flex flex-column align-items-center">
+        <div class="fs-3 mb-1 total-budget text-muted">Loading...</div>
+        <h6 class="mb-0">Season 8 Funding</h6>
+        <small class="text-muted">Total budget allocated</small>
+      </div>
+    </div>
+    <div class="col-sm-6 col-lg-5">
+      <div class="d-flex flex-column align-items-center">
+        <div class="fs-3 mb-1 total-approved text-muted">Loading...</div>
+        <h6 class="mb-0">Funding Allocated</h6>
+        <small class="text-muted">Amount approved</small>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{- partial "funding-stats-script.html" . -}}
+

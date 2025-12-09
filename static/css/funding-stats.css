@@ -1,0 +1,10 @@
+.funding-stats-container {
+  margin-bottom: 2rem;
+  padding: 2rem 0;
+}
+
+.funding-stats-container .fs-3 {
+  color: #111827;
+  font-weight: 700;
+  line-height: 1.2;
+}
