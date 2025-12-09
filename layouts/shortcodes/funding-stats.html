@@ -1,0 +1,59 @@
+{{- $apiBaseUrl := .Get "apiBaseUrl" | default (site.Params.fundingStats.apiBaseUrl | default "https://gap-indexer-feat-program-currenc-pr730.up.railway.app") -}}
+{{- $programId := .Get "programId" | default (site.Params.fundingStats.programId | default "779") -}}
+{{- $chainId := .Get "chainId" | default (site.Params.fundingStats.chainId | default "11155111") -}}
+
+<div
+  id="funding-stats-{{ $programId }}"
+  class="funding-stats-container"
+  data-api-base-url="{{ $apiBaseUrl }}"
+  data-program-id="{{ $programId }}"
+  data-chain-id="{{ $chainId }}"
+>
+  <div class="row g-4 justify-content-center">
+    <div class="col-md-6">
+      <div class="card border-0 shadow-sm h-100">
+        <div class="card-body p-4">
+          <div class="d-flex align-items-start">
+            <div class="flex-shrink-0">
+              <div class="rounded-circle bg-primary bg-opacity-10 p-3 d-inline-flex mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#FF0420" viewBox="0 0 16 16">
+                  <path d="M1 2.5A1.5 1.5 0 0 1 2.5 1h11A1.5 1.5 0 0 1 15 2.5v11a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 1 13.5v-11zM2.5 2a.5.5 0 0 0-.5.5v11a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 .5-.5v-11a.5.5 0 0 0-.5-.5h-11z"/>
+                  <path d="M3.5 6a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.5-.5zm0 3a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+              </div>
+            </div>
+            <div class="flex-grow-1">
+              <div class="fs-3 mb-1 total-budget text-muted">Loading...</div>
+              <h6 class="mb-0 text-muted">Season 8 Funding</h6>
+              <small class="text-muted">Total budget allocated</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card border-0 shadow-sm h-100">
+        <div class="card-body p-4">
+          <div class="d-flex align-items-start">
+            <div class="flex-shrink-0">
+              <div class="rounded-circle bg-primary bg-opacity-10 p-3 d-inline-flex mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#FF0420" viewBox="0 0 16 16">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                  <path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l3.5-5.5a.75.75 0 0 0-1.09-1.028z"/>
+                </svg>
+              </div>
+            </div>
+            <div class="flex-grow-1">
+              <div class="fs-3 mb-1 total-approved text-muted">Loading...</div>
+              <h6 class="mb-0 text-muted">Funding Allocated</h6>
+              <small class="text-muted">Amount approved</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{- partial "funding-stats-script.html" . -}}
+

@@ -1,0 +1,82 @@
+{{- /* Shared script for funding stats - only loads once per page */ -}}
+<script>
+  (function () {
+    if (window.fundingStatsInitialized) return;
+    window.fundingStatsInitialized = true;
+
+    function formatAmount(amount, currency) {
+      const num = parseFloat(amount);
+      if (!amount || amount === 'null' || isNaN(num) || num === 0) {
+        return '0' + (currency ? ' ' + currency : '');
+      }
+
+      let formatted;
+      if (num >= 1000000) {
+        formatted = (num / 1000000).toFixed(1) + 'M';
+      } else if (num >= 1000) {
+        formatted = (num / 1000).toFixed(1) + 'k';
+      } else {
+        formatted = num.toLocaleString();
+      }
+      return formatted + (currency ? ' ' + currency : '');
+    }
+
+    function updateElement(container, selector, value, isError) {
+      const el = container.querySelector(selector);
+      if (el) {
+        el.textContent = value;
+        if (isError) {
+          el.classList.add('text-muted');
+        } else {
+          el.classList.remove('text-muted');
+          el.style.color = '#111827';
+        }
+      }
+    }
+
+    function initFundingStats(container) {
+      const apiBaseUrl = container.dataset.apiBaseUrl;
+      const programId = container.dataset.programId;
+      const chainId = container.dataset.chainId;
+
+      if (!apiBaseUrl || !programId || !chainId) {
+        return;
+      }
+
+      const url = `${apiBaseUrl}/v2/program/funding-details?programId=${encodeURIComponent(
+        programId
+      )}&chainId=${encodeURIComponent(chainId)}`;
+
+      fetch(url)
+        .then((res) => {
+          if (!res.ok) {
+            throw new Error(`HTTP ${res.status}: ${res.statusText}`);
+          }
+          return res.json();
+        })
+        .then((data) => {
+          const currency = (data.currency && String(data.currency).trim()) || '';
+          updateElement(container, '.total-budget', formatAmount(data.totalBudget, currency), false);
+          updateElement(container, '.total-approved', formatAmount(data.totalApproved, currency), false);
+        })
+        .catch(() => {
+          updateElement(container, '.total-budget', 'N/A', true);
+          updateElement(container, '.total-approved', 'N/A', true);
+        });
+    }
+
+    function initializeAll() {
+      const containers = document.querySelectorAll('[id^="funding-stats-"]:not([data-initialized])');
+      containers.forEach((container) => {
+        container.dataset.initialized = 'true';
+        initFundingStats(container);
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initializeAll);
+    } else {
+      initializeAll();
+    }
+  })();
+</script>

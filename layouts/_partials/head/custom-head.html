@@ -9,3 +9,7 @@
 
   gtag('config', 'G-WW0NR0MRRQ');
 </script>
+
+{{- if site.Params.fundingStats.enabled }}
+<link rel="stylesheet" href="{{ "css/funding-stats.css" | relURL }}">
+{{- end }}

@@ -138,3 +138,10 @@ mainSections = ["docs"]
     newsArticle = [] # NewsArticle sections
     blogPosting = ["blog"] # BlogPosting sections
     product = [] # Product sections
+
+# Funding Stats API Integration
+[params.fundingStats]
+  enabled = true
+  apiBaseUrl = "https://gap-indexer-feat-program-currenc-pr730.up.railway.app"
+  programId = "779"
+  chainId = "11155111"
