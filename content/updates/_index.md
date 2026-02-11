@@ -12,10 +12,10 @@ images: []
 
 ### August 2024
 
-#### Season 8 Announcement
+#### Season 9 Announcement
 *August 1, 2024*
 
-We're excited to announce that Season 8 applications will open on August 20th! This season will feature increased funding for developer infrastructure and consumer applications. [Read more →](/seasons/current/season-8/)
+We're excited to announce that Season 9 applications will open on August 20th! This season will feature increased funding for developer infrastructure and consumer applications. [Read more →](/seasons/current/season-9/)
 
 ### July 2024
 
@@ -27,7 +27,7 @@ Season 7 has officially concluded with 47 projects funded totaling $2.8M in gran
 #### Office Hours Update
 *July 15, 2024*
 
-Office hours are temporarily suspended until Season 8 begins. We'll resume office hours on August 21st with expanded time slots to accommodate more projects.
+Office hours are temporarily suspended until Season 9 begins. We'll resume office hours on August 21st with expanded time slots to accommodate more projects.
 
 ### June 2024
 
