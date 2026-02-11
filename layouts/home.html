@@ -1,32 +1,19 @@
 {{ define "main" }}
 <section class="hero-section">
-  <div class="container">
+  <div class="hero-accent" aria-hidden="true"></div>
+  <div class="hero-ring" aria-hidden="true"></div>
+  <div class="container position-relative">
     <div class="row justify-content-center">
-      <div class="col-lg-12 text-center">
-        <h1 class="mb-4">{{ .Title }}</h1>
-        <p class="lead mb-5">{{ .Params.lead | safeHTML }}</p>
-      </div>
-      <div class="col-lg-10 col-xl-10 text-center">
-        <div class="alert alert-primary mb-5" role="alert">
-          <div class="d-flex align-items-center justify-content-center">
-            <div class="flex-shrink-0">
-              <span class="badge bg-primary rounded-pill p-3 me-3">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-                  <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"/>
-                  <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
-                </svg>
-              </span>
-            </div>
-            <div class="flex-grow-1 text-start">
-              <h4 class="alert-heading mb-1">Season 9 grants are open!</h4>
-            </div>
-          </div>
-        </div>
-        <!--div class="text-center">
-          <a class="btn btn-primary btn-lg me-3 mb-3" href="{{ "https://app.opgrants.io/programs/959/apply" | relURL }}" role="button">Apply for Growth Grant</a>
-          <a class="btn btn-primary btn-lg me-3 mb-3" href="{{ "https://app.opgrants.io/programs/958/apply" | relURL }}" role="button">Apply for Audit Grant</a>
-          <a class="btn btn-outline-primary btn-lg mb-3" href="{{ "seasons/current/season-8" | relURL }}" role="button">Learn More</a>
-      </div-->
+      <div class="col-lg-10 col-xl-8 text-center">
+        <a href="{{ "seasons/current/season-9" | relURL }}" class="hero-badge">
+          <span class="hero-badge__pulse"></span>
+          <span>Season 9 grants are open!</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+          </svg>
+        </a>
+        <h1 class="hero-title">{{ .Title }}</h1>
+        <p class="hero-lead">{{ .Params.lead | safeHTML }}</p>
       </div>
     </div>
   </div>
@@ -74,7 +61,7 @@
             </div>
             <h3 class="h5 card-title">Current Season</h3>
             <p class="card-text">Learn about Season 9 timeline, priorities, and application process.</p>
-            <a href="{{ "seasons/current/season-8" | relURL }}" class="btn btn-outline-primary btn-sm rounded-pill">View Details</a>
+            <a href="{{ "seasons/current/season-9" | relURL }}" class="btn btn-outline-primary btn-sm rounded-pill">View Details</a>
           </div>
         </div>
       </div>
@@ -125,22 +112,22 @@
           <div class="col-sm-6">
             <div class="d-flex align-items-start">
               <div class="flex-shrink-0">
-                <div class="fs-3 me-3">47</div>
+                <div class="fs-3 me-3">33</div>
               </div>
               <div class="flex-grow-1">
                 <h6 class="mb-0">Projects Funded</h6>
-                <small class="text-muted">in Season 7</small>
+                <small class="text-muted">in Season 8</small>
               </div>
             </div>
           </div>
           <div class="col-sm-6">
             <div class="d-flex align-items-start">
               <div class="flex-shrink-0">
-                <div class="fs-3 me-3">$2.8M</div>
+                <div class="fs-3 me-3">$1.3M</div>
               </div>
               <div class="flex-grow-1">
                 <h6 class="mb-0">Total Distributed</h6>
-                <small class="text-muted">in Season 7</small>
+                <small class="text-muted">in Season 8</small>
               </div>
             </div>
           </div>
@@ -152,7 +139,7 @@
             <div class="card-body p-5">
               <h3 class="h4 mb-3">Ready to Apply?</h3>
               <p class="mb-4">Join hundreds of builders who have received funding from the Optimism Grants. Our streamlined application process and dedicated support team are here to help you succeed.</p>
-              <a href="{{ "seasons/current/season-8/" | relURL }}" class="btn btn-primary">Learn How We Operate</a>
+              <a href="{{ "seasons/current/season-9/" | relURL }}" class="btn btn-primary">Learn How We Operate</a>
             </div>
           </div>
           <div class="position-absolute top-0 start-0 translate-middle">
