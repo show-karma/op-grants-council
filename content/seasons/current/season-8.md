@@ -28,7 +28,7 @@ Examples of eligible projects:
 
 **Key Dates**
 - Applications Open: Feb 11th 2026
-- Submissions CLoses: May 20th 2026
+- Submissions Closes: May 20th 2026
 
 Estimated timeframe of Grant Review (15 Business days total):
 - Submission Intake – 5 days
@@ -41,6 +41,7 @@ Estimated timeframe of Grant Review (15 Business days total):
 ---
 
 Need help? [Join](https://t.me/+oJWWjTQL6TcxYWJh) our Telegram group and ask away!
+
 
 
 
