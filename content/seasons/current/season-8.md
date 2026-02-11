@@ -1,35 +1,34 @@
-## Season 8 – Grants Council
+## Season 9 – Grants Council
 
-The Grants Council is granting to projects that **increase adoption** in the Optimism ecosystem.
+The Grants Council funds projects that **grow Superchain adoption by increasing DEX liquidity in priority pairs** and the **fees generated from trading those pairs**.
 
 ### Our Objective
-Projects must target **one of the following metrics**:  
-#### Total Value Locked (TVL)  
-- **Why it matters:** TVL represents supply for onchain economic activity.  
-- **Formula:** ΔTVL = (Tokens_end − Tokens_start) × Price_end 
-#### Transaction Fees  
-- **Why it matters:** Fees measure demand for transacting and willingness to pay.  
-- **Formula:**  ΔFees = Fees_end − Fees_start
+Projects must target **one of the following metrics**:
+
+#### DEX TVL in Priority Pairs (Liquidity)
+- **Why it matters:** Deep liquidity in priority pairs reduces slippage, improves execution, and unlocks more onchain activity across the Superchain.
+- **Formula:** ΔPairTVL = AvgPairTVL_end − AvgPairTVL_start
+
+#### DEX Fees in Priority Pairs
+- **Why it matters:** Fees measure real trading demand and willingness to pay to use Superchain venues for swaps.
+- **Formula:** ΔPairFees = PairFees_end − PairFees_start
 
 Examples of eligible projects:
-- Making assets in the Interop Set interop-ready  
-- Upgrades or integrations that increase interop TVL  
-- Applications or features that generate interop-enabled transactions  
-- Moving TVL into interop-compatible formats  
-- Tooling that tracks or increases adoption  
+- Incentive programs that **increase and retain** liquidity in priority pairs
+- Vaults, strategies, or automation that **improve depth** for priority pairs (example: concentrated liquidity management)
+- Routing, aggregation, or UX that **increases volume and fees** in priority-pair pools
+- Integrations that **move existing liquidity** into eligible priority pools and keep it there
+- Tooling that tracks, monitors, or improves **priority-pair TVL and fee performance**
 
-[Apply for a Grant →](https://app.opgrants.io/programs/959/apply)
+[Priority Liquidity Pairs here →](https://docs.google.com/spreadsheets/d/1WYXlIm9y4rkzR4JQt2zXpzkeZHRttz2IU4DGx04f2b0/edit?usp=sharing)
+
+[Apply for a Grant →](https://app.opgrants.io/programs/1045/apply)
 
 ---
 
 **Key Dates**
-- Applications Open: **August 20th, 2025**  
-- Results Announced: 
-  - September 11th, 2025
-  - October 2nd, 2025
-  - October 23rd, 2025
-  - November 13th, 2025
-  - December 4th, 2025
+- Applications Open: Feb 11th 2026
+- Submissions CLoses: May 20th 2026
 
 Estimated timeframe of Grant Review (15 Business days total):
 - Submission Intake – 5 days
@@ -42,5 +41,6 @@ Estimated timeframe of Grant Review (15 Business days total):
 ---
 
 Need help? [Join](https://t.me/+oJWWjTQL6TcxYWJh) our Telegram group and ask away!
+
 
 
