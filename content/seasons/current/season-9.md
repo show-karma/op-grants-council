@@ -20,7 +20,7 @@ Examples of eligible projects:
 - Integrations that **move existing liquidity** into eligible priority pools and keep it there
 - Tooling that tracks, monitors, or improves **priority-pair TVL and fee performance**
 
-[Priority Liquidity Pairs here →](https://docs.google.com/spreadsheets/d/1WYXlIm9y4rkzR4JQt2zXpzkeZHRttz2IU4DGx04f2b0/edit?usp=sharing)
+[Priority Liquidity Pairs here →](https://docs.google.com/spreadsheets/d/1IULN8oIxnIowxxuvTHIk6EIiLBaLNhAh5VXWxYkOrDI/edit?gid=0#gid=0)
 
 [Apply for a Grant →](https://app.opgrants.io/programs/1045/apply)
 
@@ -41,6 +41,7 @@ Estimated timeframe of Grant Review (15 Business days total):
 ---
 
 Need help? [Join](https://t.me/+oJWWjTQL6TcxYWJh) our Telegram group and ask away!
+
 
 
 
