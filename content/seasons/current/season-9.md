@@ -1,6 +1,6 @@
 ## Season 9 – Grants Council
 
-The Grants Council funds projects that **grow Superchain adoption by increasing DEX liquidity in priority pairs** and the **fees generated from trading those pairs**.
+The Grants Council looks for projects that **grow Superchain adoption by increasing DEX liquidity in priority pairs** and the **fees generated from trading those pairs**.
 
 ### Our Objective
 Projects must target **one of the following metrics**:
@@ -41,6 +41,7 @@ Estimated timeframe of Grant Review (15 Business days total):
 ---
 
 Need help? [Join](https://t.me/+oJWWjTQL6TcxYWJh) our Telegram group and ask away!
+
 
 
 
