@@ -11,28 +11,34 @@
   weight = 1
 
 [[main]]
+  name = "Audit Security Provider"
+  url = "https://app.opgrants.io/programs/961"
+  parent = "grants"
+  weight = 2
+
+[[main]]
   name = "Growth Grants"
   url = "https://atlas.optimism.io/missions/growth-grants"
   parent = "grants"
-  weight = 2
+  weight = 3
 
 [[main]]
   name = "Retro Funding: Dev Tooling"
   url = "https://atlas.optimism.io/missions/retro-funding-dev-tooling"
   parent = "grants"
-  weight = 3
+  weight = 4
 
 [[main]]
   name = "Retro Funding: Onchain Builders"
   url = "https://atlas.optimism.io/missions/retro-funding-onchain-builders"
   parent = "grants"
-  weight = 4
+  weight = 5
 
 [[main]]
   name = "Foundation Missions"
   url = "https://atlas.optimism.io/missions/foundation-missions"
   parent = "grants"
-  weight = 5
+  weight = 6
 
 # Applications link
 [[main]]
