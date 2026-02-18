@@ -11,7 +11,7 @@
   weight = 1
 
 [[main]]
-  name = "Audit Security Provider"
+  name = "Audit Service Provider"
   url = "https://app.opgrants.io/programs/961"
   parent = "grants"
   weight = 2
