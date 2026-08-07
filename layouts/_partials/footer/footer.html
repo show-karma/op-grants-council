@@ -1,13 +1,13 @@
 <footer class="footer text-muted">
   <div class="container-fluid text-center">
     <div class="d-flex flex-column align-items-center py-3" style="gap: 1rem;">
-      <a href="https://karmahq.xyz" target="_blank" rel="noopener" class="d-flex align-items-center text-decoration-none" style="gap: 0.75rem;">
+      <a href="{{ site.Params.karma.siteUrl }}" target="_blank" rel="noopener" class="d-flex align-items-center text-decoration-none" style="gap: 0.75rem;">
         <span class="text-muted small">Powered by</span>
         <img src="/karma-logo.svg" alt="Karma" style="height: 20px; width: 60px; object-fit: contain;">
       </a>
       <div class="d-flex flex-column align-items-center">
         <p class="mb-0 text-muted text-center small">Building transparent funding infrastructure for ecosystems.</p>
-        <a href="mailto:info@karmahq.xyz" class="text-decoration-none" style="color: #3b82f6; font-size: 0.875rem; font-weight: 500;">info@karmahq.xyz</a>
+        <a href="mailto:{{ site.Params.karma.contactEmail }}" class="text-decoration-none" style="color: #3b82f6; font-size: 0.875rem; font-weight: 500;">{{ site.Params.karma.contactEmail }}</a>
       </div>
     </div>
   </div>
