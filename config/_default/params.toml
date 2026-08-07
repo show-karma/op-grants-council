@@ -9,6 +9,11 @@ mainSections = ["docs"]
 [social]
   twitter = "optimismFND"
 
+# Karma hosts
+[karma]
+  siteUrl = "https://karmahq.org"
+  contactEmail = "info@karmahq.xyz" # mailboxes stay on .xyz
+
 # Doks (@thulite/doks-core)
 [doks]
   # Color mode
